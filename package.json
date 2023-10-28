@@ -1,0 +1,23 @@
+{
+  "name": "tp_nahual.cypress2023",
+  "version": "1.0.0",
+  "description": "E2E Framework Testing Cypress",
+  "main": "index.js",
+  
+    "scripts": {
+      "cypress:open": "cypress open"
+    }
+  
+,
+  "keywords": [
+    "E2E",
+    "Framework",
+    "Testing",
+    "Cypress"
+  ],
+  "author": "Andrade Jean",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.3.3"
+  }
+}
