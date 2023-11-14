@@ -10,20 +10,13 @@ it('fails to visit website 1', function () {
     cy.visit('https://www.invidcomputers.com')
 })
 
-describe('Agregar Prodcuto al carrito', () => {
+describe('Agregar Producto al carrito', () => {
 
     beforeEach(() => {
-        cy.visit('https://www.invidcomputers.com/')
+    cy.visit('https://www.invidcomputers.com/')
 
     });
 
-    // it('Loguearse', function () {
-
-    //     cy.get('#login_sup > [href="#"]').click()
-    //     cy.get('.modal.in > .modal-dialog > .loginmodal-container > .modal-body > #form > :nth-child(3) > #usuari')
-    //     cy.get('.modal.in > .modal-dialog > .loginmodal-container > .modal-body > #form > :nth-child(4) > #passwd')
-
-    // });
 
     it('Consultar Producto: Monitor', function () {
 

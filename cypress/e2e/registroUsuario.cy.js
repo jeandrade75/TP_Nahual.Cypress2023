@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 
 Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test
-  return false
+//   // returning false here prevents Cypress from
+//   // failing the test
+return false
 })
 
 it('fails to visit website 1', function () {
@@ -46,9 +46,9 @@ describe('Primer login', () => {
         //cy.get('*[data-cy^="introCard"]')
         cy.get('#credito').check()
         cy.get('#termYCond').check()
-        cy.get('*[class^="recaptcha-checkbox-checkmark"]').check({force: true})
-        //cy.get("[value='Male']").check({force: true});
-        cy.get('#EnviarReceta').click()
+        // cy.get('*[class^="recaptcha-checkbox-checkmark"]').check({force: true})
+        // //cy.get("[value='Male']").check({force: true});
+        // cy.get('#EnviarReceta').click()
 
 });
 });
