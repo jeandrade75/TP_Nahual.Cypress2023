@@ -14,7 +14,14 @@ describe('Contactar empresa', () => {
 
     beforeEach(() => {
         cy.visit('https://www.invidcomputers.com/')
-        cy.get('.row > :nth-child(1) > .list-unstyled > :nth-child(4) > a').click()
+        });
+
+        it('Llenar formulario', () => {
+
+        //cy.contains('EMPRESA').trigger('mouseover')
+        cy.get('.has-submenu').eq(1).click()
+        cy.contains('CONTACTO').trigger('mouseover').click()
+        //cy.contains('CONTACTO').click()
         cy.get(':nth-child(1) > .form-control').click().type('Maria')
         cy.get(':nth-child(10) > :nth-child(2) > .form-control').click().type('Perez')
         cy.get(':nth-child(3) > .form-control').click().type('maria@gmail.com')
@@ -25,6 +32,6 @@ describe('Contactar empresa', () => {
         cy.get('.col-sm-4 > .btn').click()
         cy.get('.marca').should('have.text', 'El código ingresado no coincide con la imagen de verificación. Por favor ingréselo nuevamente')
 
-
+ 
     });
-})
+});
