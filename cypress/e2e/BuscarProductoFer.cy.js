@@ -3,25 +3,28 @@
 describe('Buscador de producto', () => {
 
 
-            beforeEach(() => {
-                cy.visit('https://www.invidcomputers.com/')
+    beforeEach(() => {
 
-                // Buscar un producto
-                cy.get('#top-buscar').type('auricular genius')
-                cy.get('#top-buscar > .input-group-btn > .btn > .fa').click()
-                // Seleccionar el producto deseado
-                cy.get(':nth-child(1) > .product').click()
+        cy.visit('https://www.invidcomputers.com/')
 
-            })
-
-            it('explorar categorias', () => {
-                cy.visit('https://www.invidcomputers.com/')    //Seleccionar la categoría 
-                cy.get(':nth-child(2) > .container-fluid > .navbar-header-lateral > .ley_cate_lateral_xs').click()
-                cy.get('.nav > :nth-child(1) > #sup-prod-2').click()
-                // Verificar que la página se cargue correctamente
-                cy.get('#sup-prod-28').should('be.visible')
+        // Buscar un producto
+        cy.get('#top-buscar').type('auricular genius')
+        cy.get('#top-buscar > .input-group-btn > .btn > .fa').click()
+        // Seleccionar el producto deseado
+        cy.get(':nth-child(1) > .product').click()
 
 
+    })
+    it('explorar categorias', () => {
+        //Seleccionar la categoría
+        cy.get('.nav > :nth-child(1) > #sup-prod-2').click()
+        // Verificar que la página se cargue correctamente
+        cy.get('#sup-prod-28').should('be.visible')
 
-})
+        //validar numero de items encontrados
+        cy.get('#ordenamientoListado').select("Mayor Precio")
+
+
+
+    })
 })
